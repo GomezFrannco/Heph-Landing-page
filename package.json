@@ -1,0 +1,14 @@
+{
+  "name": "heph-landing-page",
+  "version": "1.0.0",
+  "description": "Heph Technologies landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Franco Dev",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.8"
+  }
+}

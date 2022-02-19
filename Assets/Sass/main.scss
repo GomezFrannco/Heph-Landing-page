@@ -1,0 +1,214 @@
+// IMPORT
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+// FONT
+$inter: 'Inter', sans-serif;
+$spacing: -0.05em;
+// FONT WEIGHT
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi: 600;
+$bold: 700;
+// FONT SIZE
+$title: 3rem;
+$subtitle: 1.125rem;
+$button: $subtitle;
+$paragraph: 0.875rem;
+// COLORS
+$primary-purple: #5E17EB;
+$secondary-purple: #8C52FF;
+$white: #FFF;
+// PADDINGS
+$page: 1.8125rem 5.0625rem;
+$services: 5.8125rem 5.75rem; 
+// SIZE
+$windowH: 100vh;
+$windowW: 100vw;
+// MIXINS
+@mixin full-windowH{
+    height:$windowH;
+}
+@mixin flex{
+    display: flex;
+}
+@mixin flex-column {
+    @include flex;
+    flex-direction: column;
+}
+@mixin flex-row {
+    @include flex;
+    flex-direction: row;
+}
+@mixin center-y {
+    align-items: center;
+}
+@mixin center-x {
+    justify-content: center;
+}
+@mixin row-center-y{
+    @include flex-row;
+    @include center-y
+}
+@mixin column-center-y{
+    @include flex-column;
+    @include center-y
+}
+@mixin row-center-x{
+    @include flex-row;
+    @include center-x
+}
+@mixin column-center-x{
+    @include flex-column;
+    @include center-x
+}
+@mixin spacing {
+    letter-spacing: $spacing;
+}
+@mixin transition{
+    transition: all 300ms ease-in-out;
+}
+@mixin title{
+    font-size: $title;
+    color: $white;
+    font-weight: $bold;
+}
+@mixin paragraph{
+    color: $white;
+    font-size: $paragraph;
+    font-weight: $regular;
+    @include spacing;
+}
+@mixin blur-card{
+    background: rgba(0, 0, 0, 0.39);
+    backdrop-filter: blur(4.25rem);
+    border-radius: 2.1875rem;
+}
+// CODE
+*{
+    font-family: $inter;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    outline: none;
+}
+body{
+    background-color: $primary-purple;
+    padding: $page;
+}
+.header {
+    height: $windowH;
+    .nav{
+        @include flex-row;
+        justify-content: space-between;
+        .nav_logo{
+            height: 4.1875rem;
+            width: 7.375rem;
+        }
+        .nav_menu{
+            width: 26.125rem;
+            ul{
+                @include flex-row;
+                justify-content: space-between;
+                li a{
+                    @include paragraph;
+                }
+            }
+        }
+    }
+    section{
+        height: calc(90% - 4.1875rem);
+        @include row-center-y;
+        div{
+            @include flex-column;
+            height: 18.125rem;
+            .header_text{
+                height: 100%;
+                .header_title{
+                    @include title;
+                    width: 37.5rem;
+                    @include spacing;
+                    span{
+                        color: $secondary-purple;
+                    }
+                }
+                p{
+                    @include paragraph;
+                    width: 28.125rem;
+                }
+            }
+            .header_btn{
+                width: 8.9375rem;
+                height: 3.0625rem;
+                border-radius: 0.5625rem;
+                background-color: $white;
+                color: $primary-purple;
+                font-size: $button;
+                font-weight: $medium;
+                @include spacing;
+                box-shadow: 0 0 2.1875rem rgba(255, 255, 255, 0.64);
+                text-shadow: 0px 0px 72px #5E17EB;
+            }
+        }
+    }
+}
+.main{
+    .services{
+        @include full-windowH;
+        @include flex-column;
+        justify-content: space-between;
+        .services_title{
+            @include title;
+        }
+        .services_container{
+            @include blur-card;
+            height: 37rem;
+            width: auto;
+        }
+    }
+    .about{
+        height: 100vh;
+        @include row-center-y;
+        div{
+            height: 25rem;
+            @include flex-column;
+            justify-content: space-around;
+            .about_title{
+                @include title;
+            }
+            p{
+                @include paragraph;
+                font-size:$subtitle;
+                width:700px;
+                line-height: 130.52%;
+            }
+        }
+    }
+}
+footer{
+    height: 35.5rem;
+    .contact_container{
+        @include column-center-y;
+        @include center-x;
+        @include blur-card;
+        height: 23.0625rem;
+        .contact_text{
+            @include column-center-y;
+            justify-content: space-around;
+            height: 8.8125rem;
+            h2{
+                @include title;
+            }
+            p{
+                @include paragraph;
+                width: 29.25rem;
+                text-align: center; 
+            }
+        }
+    }
+}
