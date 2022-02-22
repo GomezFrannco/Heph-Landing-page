@@ -110,6 +110,15 @@ button{
 body{
     background-color: $primary-purple;
     padding: $page;
+    .item{
+        position: absolute;
+        z-index: -1;
+        transform: rotate(-58.8deg);
+        width: 893.54px;
+        height: 982.16px;
+        top: -276.33px;
+        left:-386px;
+    }
 }
 .header {
     height: $windowH;
