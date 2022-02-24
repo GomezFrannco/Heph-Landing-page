@@ -79,7 +79,7 @@ $windowW: 100vw;
 }
 @mixin blur-card{
     background: rgba(0, 0, 0, 0.39);
-    backdrop-filter: blur(4.25rem);
+    backdrop-filter: blur(0.9375rem);
     border-radius: 2.1875rem;
 }
 @mixin btn{
@@ -91,6 +91,16 @@ $windowW: 100vw;
 @mixin form($width){
     height: 1.875rem;
     border: 1px solid $white;
+    width: $width;
+}
+@mixin bgItem($Y-position, $value, $X-position, $position-value){
+    #{$Y-position}: $value;
+    #{$X-position}: $position-value;
+    z-index: -1;
+    position: absolute;
+}
+@mixin size($height, $width){
+    height: $height;
     width: $width;
 }
 // CODE
@@ -110,14 +120,61 @@ button{
 body{
     background-color: $primary-purple;
     padding: $page;
-    .item{
-        position: absolute;
-        z-index: -1;
+    overflow-x: hidden !important;
+    #item_1{
+        @include bgItem(top, -17.2706rem, left, -24.125rem);
+        @include size(61.385rem, 55.8462rem);
         transform: rotate(-58.8deg);
-        width: 893.54px;
-        height: 982.16px;
-        top: -276.33px;
-        left:-386px;
+    }
+    #item_2{
+        @include bgItem(top, -0.625rem, right, 18.75rem);
+        @include size(434.3104px, 395.12px);
+        transform: rotate(16.13deg);
+    }
+    #item_3{
+        @include bgItem(top, 12.5rem, right, 120px);
+        @include size(18.5625rem, 16.8875rem);
+        transform: rotate(105deg)
+    }
+    #item_4{
+        @include bgItem(top, -10.625rem, right, -31.25rem);
+        @include size(86.5269rem, 78.72rem);
+        transform: rotate(-165.17deg);
+    }
+    #item_5{
+        @include bgItem(top, 38.75rem, left, -320px);
+        @include size(55.9131rem, 50.8681rem);
+        transform: rotate(16.13deg);
+    }
+    #item_6{
+        @include bgItem(top, 66.0656rem, left, 31.25rem);
+        @include size(20.6438rem, 18.7813rem);
+        transform: rotate(118deg);
+    }
+    #item_7{
+        @include bgItem(bottom, -1350px, right, -31.25rem);
+        @include size(55.9131rem, 50.8681rem);
+        transform: rotate(-86.77deg);
+    }
+    #item_8{
+        @include bgItem(top, 1600px, left, -200px);
+        @include size(434.45px, 396.16px);
+        transform: rotate(31.18deg);
+    }
+    #item_9{
+        @include bgItem(bottom, -1890px, left, 0px);
+        @include size(61.8075rem, 56.2306rem);
+        transform: rotate(-179.66deg);
+    }
+    #item_10{
+        @include bgItem(top, 2000px, right, -120px);
+        @include size(308.8px, 281.59px); 
+        transform: rotate(9.96deg)
+    }
+    #item_11{
+        @include bgItem(bottom, -1900px, right, 150px);
+        @include size(573.38px, 521.64px);
+        transform: rotate(62.47deg);
     }
 }
 .header {
@@ -126,8 +183,7 @@ body{
         @include flex-row;
         justify-content: space-between;
         .nav_logo{
-            height: 4.1875rem;
-            width: 7.375rem;
+            @include size(4.1875rem, 7.375rem);
         }
         .nav_menu{
             width: 26.125rem;
@@ -150,8 +206,8 @@ body{
                 height: 100%;
                 .header_title{
                     @include title;
-                    width: 37.5rem;
                     @include spacing;
+                    width: 37.5rem;
                     span{
                         color: $secondary-purple;
                     }
@@ -162,11 +218,10 @@ body{
                 }
             }
             .header_btn{
-                width: 8.9375rem;
-                height: 3.0625rem;
+                @include btn;
+                @include size(3.0625rem, 8.9375rem);
                 border-radius: 0.5625rem;
                 font-size: $button;
-                @include btn;
                 box-shadow: 0 0 2.1875rem rgba(255, 255, 255, 0.64);
                 text-shadow: 0px 0px 72px #5E17EB;
             }
@@ -183,16 +238,15 @@ body{
         }
         .services_container{
             @include blur-card;
-            height: 37rem;
-            width: auto;
+            @include size(37rem, auto)
         }
     }
     .about{
-        height: 100vh;
         @include row-center-y;
+        height: 100vh;
         div{
-            height: 25rem;
             @include flex-column;
+            height: 25rem;
             justify-content: space-around;
             .about_title{
                 @include title;
@@ -207,14 +261,15 @@ body{
     }
 }
 footer {
-    height: 35.5rem;
     @include flex-column;
+    height: 31.25rem;
     justify-content: space-between;
     .contact_container{
         @include column-center-y;
         @include center-x;
         @include blur-card;
-        height: 23.0625rem;
+        @include size(23.0625rem, 55.75rem);
+        margin: 0 auto;
         .contact_text{
             @include column-center-y;
             justify-content: space-around;
@@ -260,5 +315,5 @@ footer {
             @include paragraph
         }
     }
-    
 }
+

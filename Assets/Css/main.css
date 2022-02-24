@@ -19,15 +19,106 @@ button {
 body {
   background-color: #5E17EB;
   padding: 1.8125rem 5.0625rem;
+  overflow-x: hidden !important;
 }
-body .item {
-  position: absolute;
+body #item_1 {
+  top: -17.2706rem;
+  left: -24.125rem;
   z-index: -1;
+  position: absolute;
+  height: 61.385rem;
+  width: 55.8462rem;
   transform: rotate(-58.8deg);
-  width: 893.54px;
-  height: 982.16px;
-  top: -276.33px;
-  left: -386px;
+}
+body #item_2 {
+  top: -0.625rem;
+  right: 18.75rem;
+  z-index: -1;
+  position: absolute;
+  height: 434.3104px;
+  width: 395.12px;
+  transform: rotate(16.13deg);
+}
+body #item_3 {
+  top: 12.5rem;
+  right: 120px;
+  z-index: -1;
+  position: absolute;
+  height: 18.5625rem;
+  width: 16.8875rem;
+  transform: rotate(105deg);
+}
+body #item_4 {
+  top: -10.625rem;
+  right: -31.25rem;
+  z-index: -1;
+  position: absolute;
+  height: 86.5269rem;
+  width: 78.72rem;
+  transform: rotate(-165.17deg);
+}
+body #item_5 {
+  top: 38.75rem;
+  left: -320px;
+  z-index: -1;
+  position: absolute;
+  height: 55.9131rem;
+  width: 50.8681rem;
+  transform: rotate(16.13deg);
+}
+body #item_6 {
+  top: 66.0656rem;
+  left: 31.25rem;
+  z-index: -1;
+  position: absolute;
+  height: 20.6438rem;
+  width: 18.7813rem;
+  transform: rotate(118deg);
+}
+body #item_7 {
+  bottom: -1350px;
+  right: -31.25rem;
+  z-index: -1;
+  position: absolute;
+  height: 55.9131rem;
+  width: 50.8681rem;
+  transform: rotate(-86.77deg);
+}
+body #item_8 {
+  top: 1600px;
+  left: -200px;
+  z-index: -1;
+  position: absolute;
+  height: 434.45px;
+  width: 396.16px;
+  transform: rotate(31.18deg);
+}
+body #item_9 {
+  bottom: -1890px;
+  left: 0px;
+  z-index: -1;
+  position: absolute;
+  height: 61.8075rem;
+  width: 56.2306rem;
+  transform: rotate(-179.66deg);
+}
+body #item_10 {
+  top: 2000px;
+  right: -120px;
+  z-index: -1;
+  position: absolute;
+  height: 308.8px;
+  width: 281.59px;
+  transform: rotate(9.96deg);
+}
+body #item_11 {
+  bottom: -1900px;
+  right: 150px;
+  z-index: -1;
+  position: absolute;
+  height: 573.38px;
+  width: 521.64px;
+  transform: rotate(62.47deg);
 }
 
 .header {
@@ -74,8 +165,8 @@ body .item {
   font-size: 3rem;
   color: #FFF;
   font-weight: 700;
-  width: 37.5rem;
   letter-spacing: -0.05em;
+  width: 37.5rem;
 }
 .header section div .header_text .header_title span {
   color: #8C52FF;
@@ -88,14 +179,14 @@ body .item {
   width: 28.125rem;
 }
 .header section div .header_btn {
-  width: 8.9375rem;
-  height: 3.0625rem;
-  border-radius: 0.5625rem;
-  font-size: 1.125rem;
   background-color: #FFF;
   color: #5E17EB;
   font-weight: 500;
   letter-spacing: -0.05em;
+  height: 3.0625rem;
+  width: 8.9375rem;
+  border-radius: 0.5625rem;
+  font-size: 1.125rem;
   box-shadow: 0 0 2.1875rem rgba(255, 255, 255, 0.64);
   text-shadow: 0px 0px 72px #5E17EB;
 }
@@ -113,21 +204,21 @@ body .item {
 }
 .main .services .services_container {
   background: rgba(0, 0, 0, 0.39);
-  backdrop-filter: blur(4.25rem);
+  backdrop-filter: blur(0.9375rem);
   border-radius: 2.1875rem;
   height: 37rem;
   width: auto;
 }
 .main .about {
-  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 100vh;
 }
 .main .about div {
-  height: 25rem;
   display: flex;
   flex-direction: column;
+  height: 25rem;
   justify-content: space-around;
 }
 .main .about div .about_title {
@@ -146,9 +237,9 @@ body .item {
 }
 
 footer {
-  height: 35.5rem;
   display: flex;
   flex-direction: column;
+  height: 31.25rem;
   justify-content: space-between;
 }
 footer .contact_container {
@@ -157,9 +248,11 @@ footer .contact_container {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.39);
-  backdrop-filter: blur(4.25rem);
+  backdrop-filter: blur(0.9375rem);
   border-radius: 2.1875rem;
   height: 23.0625rem;
+  width: 55.75rem;
+  margin: 0 auto;
 }
 footer .contact_container .contact_text {
   display: flex;
