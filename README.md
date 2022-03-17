@@ -4,7 +4,7 @@
 
 This is a concept of a landing page for Heph technologies.
 
-Creator: [Frango Gomez](https://github.com/GomezFrannco)
+Creator: [Franco Gomez](https://github.com/GomezFrannco)
 
 # Used technologies
 
