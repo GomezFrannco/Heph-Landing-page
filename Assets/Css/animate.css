@@ -395,4 +395,35 @@ footer .copy_text p {
   background-color: red;
 }
 
-/*# sourceMappingURL=main.css.map */
+.header .nav .nav_menu ul li a:hover {
+  box-shadow: 0 0 1.25rem 0.125rem rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.header section div .header_btn:hover {
+  box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.64);
+  transform: scale(1.05);
+}
+
+.main .services .services_container .description button:hover {
+  background-color: #fff;
+  color: #5e17eb;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  transform: scale(1.05);
+}
+
+footer .contact_container .contact_form .form .contact_btn:hover {
+  background-color: transparent;
+  color: #fff;
+  font-weight: 300;
+  cursor: pointer;
+}
+footer .contact_container .contact_form .form .contact_btn:active {
+  background-color: #fff;
+  color: #5e17eb;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=animate.css.map */
