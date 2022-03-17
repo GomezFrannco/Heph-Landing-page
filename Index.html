@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FrangoGomez">
+    <link rel="icon" href="" type="image/png" />
+
+    <title>Heph technologies</title>
+    <meta name="description" content="">
+
     <link rel="stylesheet" href="./Assets/Css/main.css">
     <link rel="stylesheet" href="./Assets/Css/animate.css">
-    <link rel="stylesheet" href="./Assets/Css/responsive.css">
+    <!-- <link rel="stylesheet" href="./Assets/Css/responsive.css"> -->
     <link rel="stylesheet" href="./Assets/Css/normalize.css">
-    <title>Heph technologies</title>
 </head>
 <body>
     
-    <header class="header" id="home">
-        <nav class="nav">
-            <div class="nav_logo"></div>
+    <header class="header">
+        <nav class="nav" id="home">
+            <div class="nav_logo">
+                <img src="./Assets/img/logo.svg" alt="Heph_Technologies_logo">
+            </div>
             <div class="nav_menu">
                 <ul>
                     <li>
@@ -43,21 +50,21 @@
         </section>
     </header>
     <main class="main">
-        <section class="services" id="#services">
+        <section class="services" id="services">
             <h2 class="services_title">Our services</h2>
             <div class="services_container" id="service_list">
-                
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div>
                 <h2 class="about_title">About us</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus ac ipsum sed rhoncus. Nam euismod auctor ipsum. Etiam interdum nulla neque, eu elementum arcu fermentum vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus ac ipsum sed rhoncus. Nam euismod auctor ipsum. Etiam interdum nulla neque, eu elementum arcu fermentum vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus ac ipsum sed rhoncus. Nam euismod auctor ipsum. Etiam interdum nulla neque, eu elementum arcu fermentum vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus ac ipsum sed rhoncus. Nam euismod auctor ipsum. Etiam interdum nulla neque, eu elementum arcu fermentum vel.</p>
             </div>
+            <img src="./Assets/img/logo.svg" alt="Heph_Technologies_logo">
         </section>
     </main>
     <footer>
-        <div class="contact_container">
+        <div class="contact_container" id="contact">
             <div class="contact_text">
                 <h2>Get in touch with us</h2>
                 <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut cursus ac ipsum sed rhoncus. Nam euismod auctor ipsum.</p>
@@ -73,6 +80,11 @@
             <p>&copy; 2022 Heph technologies</p>
         </div>
     </footer>
+    <div class="scroll" id="scroll">
+        <i class="scroll_icon">
+            <img src="/Assets/Svg/up.svg" alt="toTop_button">
+        </i>
+    </div>
     <img src="/Assets/Svg/bg_item.svg" id="item_1">
     <img src="/Assets/Svg/bg_item.svg" id="item_2">
     <img src="/Assets/Svg/bg_item.svg" id="item_3">
@@ -85,5 +97,6 @@
     <img src="/Assets/Svg/bg_item.svg" id="item_10">
     <img src="/Assets/Svg/bg_item.svg" id="item_11">
     <script src="/Assets/JavaScript/services.js" type="module"></script>
+    <script src="/Assets/JavaScript/scroll.js"></script>
 </body>
 </html>

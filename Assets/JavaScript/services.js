@@ -1,13 +1,14 @@
+// services objects
 import { services } from "./data/services.js";
 
-const serviceBox = document.querySelector("#service_list")
+// DOM container
+const serviceBox = document.querySelector("#service_list");
 
-
-for (let i = 0; i < services.length; i++) {
-  let node = document.createElement('div')
-  node.classList.add('service_card')
-  node.innerHTML = `
-  <div class="service">
+// services DOM render
+for (let i = 0; i < services.length; i++) { // --> for loop in object array
+  let node = document.createElement("div"); // --> creates an element
+  node.classList.add("service_card"); // --> adds a class to the element
+  node.innerHTML = `<div class="service">
     <div class="service_icon">
       <img src="${services[i].thumbnail}">
       <h3>${services[i].title}</h3>
@@ -16,8 +17,6 @@ for (let i = 0; i < services.length; i++) {
   <div class="description">
     <p>${services[i].description}</p>
     <button>View more +</button>
-  </div>  
-  `
-  serviceBox.appendChild(node)
-}
-
+  </div>`;
+  serviceBox.appendChild(node); // --> set the objects in a DOM element
+};

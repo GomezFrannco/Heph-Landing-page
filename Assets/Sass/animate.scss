@@ -1,4 +1,9 @@
 @import 'main';
+/*
+================================================================
+HEADER BUTTON
+================================================================
+*/
 .header {
   .nav {
     .nav_menu {
@@ -15,37 +20,65 @@
       .header_btn:hover {
         box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.64);
         transform: scale(1.05);
+        cursor: pointer;
       }
     }
   }
 }
+/*
+================================================================
+SERVICES BUTTONS
+================================================================
+*/
 .main{
   .services{
     .services_container{
       .description{
         button:hover{
           @include btn;
-          transform: scale(1.05)
+          transform: scale(1.05);
+          cursor: pointer;
         }
       }
     }
   }
 }
+/*
+================================================================
+EMAIL FORM BUTTON
+================================================================
+*/
 footer{
-    .contact_container{
-      .contact_form{
-        .form{
-          .contact_btn:hover{
-            background-color: transparent;
-            color: $white;
-            font-weight: $light;
-            cursor: pointer;
-          }
-          .contact_btn:active{
-            @include btn;
-            cursor: pointer; 
-          }
+  .contact_container{
+    .contact_form{
+      .form{
+        .contact_btn:hover{
+          background-color: transparent;
+          color: $white;
+          font-weight: $light;
+          cursor: pointer;
+        }
+        .contact_btn:active{
+          @include btn;
+          cursor: pointer; 
         }
       }
     }
+  }
+}
+/*
+================================================================
+SCROLL TO TOP BUTTON
+================================================================
+*/
+body{
+  .scroll:hover{
+    box-shadow: 0 0.625rem 15px rgba(0,0,0, 0.5);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  .scroll:active{
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
 }
